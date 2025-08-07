@@ -1,13 +1,12 @@
-import java.security.PrivateKey;
 import java.time.LocalDate;
 
-public class Post {
+public class Posts {
     private String title;
     private String content;
     private User author;
     private LocalDate creationDate;
 
-    public Post(String title, String content, User author, LocalDate creationDate) {
+    public Posts(String title, String content, User author, LocalDate creationDate) {
         this.title = title;
         this.content = content;
         this.author = author;

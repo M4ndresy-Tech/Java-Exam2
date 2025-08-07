@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class GroupOfUsers {
@@ -5,11 +6,11 @@ public class GroupOfUsers {
     private List<StandarUser> standarUsrs;
     private List<Mediator> mediators;
     private Admin admin;
-    private List<Post> posts;
+    private List<Posts> posts;
     private List<Comments> comments;
 
 
-    public GroupOfUsers(String groupName,List<StandarUser> standarUsrs, List<Mediator> mediators, Admin admin,List<Post> posts, List<Comments> comments) {
+    public GroupOfUsers(String groupName, List<StandarUser> standarUsrs, List<Mediator> mediators, Admin admin, List<Posts> posts, List<Comments> comments) {
         this.standarUsrs = standarUsrs;
         this.mediators = mediators;
         this.admin = admin;
@@ -41,10 +42,10 @@ public class GroupOfUsers {
     public void setAdmin(Admin admin) {
         this.admin = admin;
     }
-    public List<Post> getPosts() {
+    public List<Posts> getPosts() {
         return posts;
     }
-    public void setPosts(List<Post> posts) {
+    public void setPosts(List<Posts> posts) {
         this.posts = posts;
     }
 
@@ -62,5 +63,15 @@ public class GroupOfUsers {
 
     public void setComments(List<Comments> comments) {
         this.comments = comments;
+    }
+
+    public List<Posts> searchPosts(List<Posts> pub,String keyword) {
+        List<Posts> postsList = new ArrayList<>();
+        for (Posts p : pub) {
+            if (keyword.equalsIgnoreCase(p.getContent())) {
+                postsList.add(p);
+            }
+        }
+        return postsList;
     }
 }
