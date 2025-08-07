@@ -75,7 +75,8 @@ public class GroupOfUsers {
         return postsList;
     }
 
-
-
+    public int totalPosts(List<Posts> pub) {
+        return pub.size();
+    }
 
 }
