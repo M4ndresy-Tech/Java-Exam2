@@ -3,15 +3,15 @@ import java.util.List;
 
 public class GroupOfUsers {
     private String groupName;
-    private List<StandarUser> standarUsrs;
+    private List<StandardUser> standardUsers;
     private List<Mediator> mediators;
     private Admin admin;
     private List<Posts> posts;
     private List<Comments> comments;
 
 
-    public GroupOfUsers(String groupName, List<StandarUser> standarUsrs, List<Mediator> mediators, Admin admin, List<Posts> posts, List<Comments> comments) {
-        this.standarUsrs = standarUsrs;
+    public GroupOfUsers(String groupName, List<StandardUser> standardUsers, List<Mediator> mediators, Admin admin, List<Posts> posts, List<Comments> comments) {
+        this.standardUsers = standardUsers;
         this.mediators = mediators;
         this.admin = admin;
         this.posts = posts;
@@ -19,12 +19,12 @@ public class GroupOfUsers {
         this.comments = comments;
     }
 
-    public List<StandarUser> getStandarUsrs() {
-        return standarUsrs;
+    public List<StandardUser> getStandardUsers() {
+        return standardUsers;
     }
 
-    public void setStandarUsrs(List<StandarUser> standarUsrs) {
-        this.standarUsrs = standarUsrs;
+    public void setStandardUsers(List<StandardUser> standarUsers) {
+        this.standardUsers = standarUsers;
     }
 
     public List<Mediator> getMediators() {
@@ -74,4 +74,8 @@ public class GroupOfUsers {
         }
         return postsList;
     }
+
+
+
+
 }
