@@ -1,10 +1,10 @@
 import java.time.LocalDate;
 
 public class User {
-    String userId;
-    String userName;
-    String userEmail;
-    LocalDate creationDate=LocalDate.now();
+    private String userId;
+    private String userName;
+    private String userEmail;
+    private LocalDate creationDate=LocalDate.now();
 
     public User(String userId, String userName, String userEmail, LocalDate creationDate) {
         this.userId = userId;
